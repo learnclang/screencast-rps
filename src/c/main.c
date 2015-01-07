@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
 
 const int MAX_ARGUMENT_COUNT = 3;
@@ -7,7 +6,8 @@ const char* choices[] = {"rock", "paper", "scissors"};
 const char* results[] = {"It's a tie", "Player 1 wins", "Player 2 wins"};
 
 int input_id(const char* input) {
-	for(const char** choice = choices; choice < choices + sizeof(choices) / sizeof(choices[0]); ++choice) {
+    const char** choice;
+	for(choice = choices; choice < choices + sizeof(choices) / sizeof(choices[0]); ++choice) {
 		if (strcmp(input, *choice) == 0) {
 			return choice - choices;
 		}
@@ -21,9 +21,9 @@ int main(int argc, char* args[]) {
 		return 1;
 	}
 
+    int i;
 	int pchoice[] = {0, 0};
-//	for(char** arg = args + 1; arg < args + MAX_ARGUMENT_COUNT; ++arg) {
-	for(int i = 1; i < MAX_ARGUMENT_COUNT; ++i) {
+	for(i = 1; i < MAX_ARGUMENT_COUNT; ++i) {
 		const int cindex = i - 1;
 		pchoice[cindex] = input_id(args[i]);
 		if (pchoice[cindex] < 0) {
