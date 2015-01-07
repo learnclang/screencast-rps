@@ -1,5 +1,23 @@
 #!/usr/bin/env python
-"""python implementation by @mottosso"""
+"""Multiplayer Rock Paper Scissor
+
+A minimal implementation of a Rock, Paper, Scissor game for two players.
+
+Usage:
+    Two players enter an option each, each argument representing a player.
+    Argument 1 = Player 1
+    Argument 2 = Player 2
+
+Example:
+    $ rps rock paper
+    Player 2 wins!
+    $ rps scissors paper
+    Player 1 wins!
+
+Python implementation by @mottosso
+
+"""
+
 import argparse
 choices = ["rock", "paper", "scissors"]
 
