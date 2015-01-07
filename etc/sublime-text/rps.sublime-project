@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "../..",
+			"file_exclude_patterns": [
+				"*.pro.user",
+				"*.sublime-*",
+			],
+			"folder_exclude_patterns": [
+				".git",
+				"build*"
+			]
+		}
+	]
+}
