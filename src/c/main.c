@@ -6,7 +6,7 @@ const char* choices[] = {"rock", "paper", "scissors"};
 const char* results[] = {"It's a tie", "Player 1 wins", "Player 2 wins"};
 
 int input_id(const char* input) {
-    const char** choice;
+	const char** choice;
 	for(choice = choices; choice < choices + sizeof(choices) / sizeof(choices[0]); ++choice) {
 		if (strcmp(input, *choice) == 0) {
 			return choice - choices;
@@ -21,7 +21,7 @@ int main(int argc, char* args[]) {
 		return 1;
 	}
 
-    int i;
+	int i;
 	int pchoice[] = {0, 0};
 	for(i = 1; i < MAX_ARGUMENT_COUNT; ++i) {
 		const int cindex = i - 1;
