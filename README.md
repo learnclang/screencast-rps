@@ -18,7 +18,7 @@ We will setup a single-module C program roughly based on [this implementation](h
 
 This episode aired 8 pm GMT+0 on *Wednesday* the 7th of January 2015.
 
-[impl]: https://github.com/learnclang/screencast-1-rps/blob/master/src/python/rps.py
-[code-episode-1]: https://github.com/learnclang/screencast-1-rps/tree/screencast-01_re-recorded
+[impl]: https://github.com/learnclang/screencast-rps/blob/master/src/python/rps.py
+[code-episode-1]: https://github.com/learnclang/screencast-rps/tree/screencast-01_re-recorded
 
 
