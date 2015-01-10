@@ -13,6 +13,9 @@ Now that we know pointers, it's about time to understand how `char*` strings wor
 
 In the second episode we learn what pointers are, and how to use them correctly. This will be a major achievement for everyone set out to learn C or C++.
 
+This episode aired at 8 pm GMT+0 on *Friday* the 9th of January 2015.
+[Watch it on youtube !][e2-youtube]
+
 **This episode aired at 8 pm GMT+0 on *Friday* the 9th of January 2015.**
 
 The episodes code [can be found here][e2-code]
@@ -33,5 +36,6 @@ This episode aired 8 pm GMT+0 on *Wednesday* the 7th of January 2015.
 [e1-code]: https://github.com/learnclang/screencast-rps/tree/screencast-01_re-recorded
 [e2-code]: https://github.com/learnclang/screencast-rps/tree/episode-02_pointers
 [e1-youtube]: https://www.youtube.com/watch?v=SaH1l9fd27A
+[e2-youtube]: http://youtu.be/-bDpQYa4zM4
 
 
