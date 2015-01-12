@@ -8,7 +8,7 @@ int main(int argc, char* args[]) {
 		return 1;
 	}
 
-	switch(rps_match(args[1], args[2])) {
+	switch(rps_match(rps_item_by_name(args[1]), rps_item_by_name(args[2]))) {
 	case RPS_P1_INVALID: {
 		fprintf(stderr, "P1 INVALID\n");
 		return 1;
