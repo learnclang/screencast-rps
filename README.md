@@ -6,7 +6,9 @@ Can't make it? Speak up [in the chat room](https://gitter.im/learnclang/general)
 
 Now that we have a 'game-engine' in a separate compile unit, we will start to generalize it even more and start using structures to describe our game state. We will do all this in the name of science, as we need a reason to learn about c structs, as well as the heap at some point :) !
 
-This episode will air at 8 pm GMT+0 on *Monday* the 12th of January 2015.
+This episode aired at 8 pm GMT+0 on *Monday* the 12th of January 2015. [Watch it on youtube !][e4-youtube]
+
+The episodes code [can be found here][e4-code]
 
 ## Episode 3
 
@@ -39,8 +41,9 @@ This episode aired 8 pm GMT+0 on *Wednesday* the 7th of January 2015.
 [e1-code]: https://github.com/learnclang/screencast-rps/tree/screencast-01_re-recorded
 [e2-code]: https://github.com/learnclang/screencast-rps/tree/episode-02_pointers
 [e3-code]: https://github.com/learnclang/screencast-rps/tree/episode-03_strings-and-compile-units
+[e4-code]: https://github.com/learnclang/screencast-rps/tree/episode-04_structs-and-heap-usage
 [e1-youtube]: https://www.youtube.com/watch?v=SaH1l9fd27A
 [e2-youtube]: http://youtu.be/-bDpQYa4zM4
 [e3-youtube]: http://youtu.be/y9Zf9PDbr3E
-
+[e4-youtube]: http://youtu.be/4cf38d3SSeA
 

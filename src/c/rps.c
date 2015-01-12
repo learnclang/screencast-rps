@@ -1,4 +1,6 @@
 #include <assert.h>
+#include <string.h>
+#include <stdlib.h>
 
 #include "rps.h"
 
@@ -30,12 +32,8 @@ int rps_strcmp(const char* a, const char* b) {
 }
 
 RPS_Result rps_match(const RPSItem *p1_pick, const RPSItem *p2_pick) {
-	if (p1_pick == 0) {
-		return RPS_P1_INVALID;
-	}
-	if (p2_pick == 0) {
-		return RPS_P2_INVALID;
-	}
+	assert(p1_pick);
+	assert(p2_pick);
 
 	switch(((p1_pick->id - p2_pick->id) + NUM_ITEMS) % NUM_ITEMS) {
 	case 0: return RPS_TIE;
@@ -48,11 +46,13 @@ RPS_Result rps_match(const RPSItem *p1_pick, const RPSItem *p2_pick) {
 	}
 }
 
-const RPSItem *rps_item_by_name(const char *name)
+RPSItem* rps_item_by_name(const char *name)
 {
 	for (const RPSItem* item = items; item < items + NUM_ITEMS; ++item) {
 		if (rps_strcmp(item->name, name) == 0) {
-			return item;
+			RPSItem* new_item = malloc(sizeof(RPSItem));
+			memcpy(new_item, item, sizeof(RPSItem));
+			return new_item;
 		}
 	}
 

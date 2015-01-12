@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "rps.h"
 
@@ -8,15 +9,20 @@ int main(int argc, char* args[]) {
 		return 1;
 	}
 
-	switch(rps_match(rps_item_by_name(args[1]), rps_item_by_name(args[2]))) {
-	case RPS_P1_INVALID: {
+	RPSItem* p1 = rps_item_by_name(args[1]);
+	if (p1 == 0) {
 		fprintf(stderr, "P1 INVALID\n");
 		return 1;
 	}
-	case RPS_P2_INVALID: {
+	RPSItem* p2 = rps_item_by_name(args[2]);
+	if (p2 == 0) {
+		free(p1);
 		fprintf(stderr, "P2 INVALID\n");
 		return 2;
 	}
+
+	int rval = 0;
+	switch(rps_match(p1, p2)) {
 	case RPS_TIE: {
 		printf("TIE\n");
 		break;
@@ -31,8 +37,11 @@ int main(int argc, char* args[]) {
 	}
 	case RPS_ERROR: {
 		fprintf(stderr, "ERROR");
-		return 255;
+		rval = 255;
 	}
 	}
-	return 0;
+
+	free(p1);
+	free(p2);
+	return rval;
 }
