@@ -2,6 +2,11 @@ Screencast will be happening [HERE](http://www.twitch.tv/learnclang)
 
 Can't make it? Speak up [in the chat room](https://gitter.im/learnclang/general)
 
+## Episode 4
+
+Now that we have a 'game-engine' in a separate compile unit, we will start to generalize it even more and start using structures to describe our game state. We will do all this in the name of science, as we need a reason to learn about c structs, as well as the heap at some point :) !
+
+This episode will air at 8 pm GMT+0 on *Monday* the 12th of January 2015.
 
 ## Episode 3
 
