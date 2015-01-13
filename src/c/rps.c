@@ -3,13 +3,29 @@
 
 #include "rps.h"
 
+
+void rps_rock_lost(FILE* stream) {
+	fprintf(stream, "I am blind !\n");
+}
+
+void rps_paper_lost(FILE* stream) {
+	fprintf(stream, "I feel divided!\n");
+}
+
+void rps_scissors_lost(FILE* stream) {
+	fprintf(stream, "I am crushed !\n");
+}
+
 const RPSItem items[] = {
 	{ .name = "rock",
-	  .id = 0 },
+	  .id = 0,
+	  .say_you_lost = rps_rock_lost,},
 	{ .name = "paper",
-	  .id = 1},
+	  .id = 1,
+	  .say_you_lost = rps_paper_lost,},
 	{ .name = "scissors",
-	  .id = 2 }
+	  .id = 2,
+	  .say_you_lost = rps_scissors_lost,}
 };
 const int NUM_ITEMS = sizeof(items) / sizeof(items[0]);
 

@@ -7,7 +7,9 @@ Can't make it? Speak up [in the chat room](https://gitter.im/learnclang/general)
 Once we spoke a little more about heap and stack allocation, we will do a quick run of `valgrind` to check for memory leaks. And since valgrind is a profiler too, we should give that a whirl as well.
 If there is time left, we shall have a look at means to emulate object-oriented polymorphism in C.
 
-This episode will air at 8 pm GMT+0 on *Tuesday* the 13th of January 2015.
+This episode aired at 8 pm GMT+0 on *Tuesday* the 13th of January 2015. [Watch it on youtube !][e5-youtube]
+
+The episodes code [can be found here][e5-code]
 
 ## Episode 4
 
@@ -49,8 +51,10 @@ This episode aired 8 pm GMT+0 on *Wednesday* the 7th of January 2015.
 [e2-code]: https://github.com/learnclang/screencast-rps/tree/episode-02_pointers
 [e3-code]: https://github.com/learnclang/screencast-rps/tree/episode-03_strings-and-compile-units
 [e4-code]: https://github.com/learnclang/screencast-rps/tree/episode-04_structs-and-heap-usage
+[e5-code]: https://github.com/learnclang/screencast-rps/tree/episode-05_valgrind-and-polymorphism
 [e1-youtube]: https://www.youtube.com/watch?v=SaH1l9fd27A
 [e2-youtube]: http://youtu.be/-bDpQYa4zM4
 [e3-youtube]: http://youtu.be/y9Zf9PDbr3E
 [e4-youtube]: http://youtu.be/4cf38d3SSeA
+[e5-youtube]: http://youtu.be/AZuDQ7iew1Q
 
