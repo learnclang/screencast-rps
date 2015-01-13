@@ -9,20 +9,21 @@ int main(int argc, char* args[]) {
 		return 1;
 	}
 
-	RPSItem* p1 = rps_item_by_name(args[1]);
-	if (p1 == 0) {
+	RPSItem p1, p2;
+
+	RPSItem* res = rps_item_by_name(args[1], &p1);
+	if (res == 0) {
 		fprintf(stderr, "P1 INVALID\n");
 		return 1;
 	}
-	RPSItem* p2 = rps_item_by_name(args[2]);
-	if (p2 == 0) {
-		free(p1);
+	res = rps_item_by_name(args[2], &p2);
+	if (res == 0) {
 		fprintf(stderr, "P2 INVALID\n");
 		return 2;
 	}
 
 	int rval = 0;
-	switch(rps_match(p1, p2)) {
+	switch(rps_match(&p1, &p2)) {
 	case RPS_TIE: {
 		printf("TIE\n");
 		break;
@@ -41,7 +42,5 @@ int main(int argc, char* args[]) {
 	}
 	}
 
-	free(p1);
-	free(p2);
 	return rval;
 }

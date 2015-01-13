@@ -9,5 +9,5 @@ typedef struct {
 	const int   id;
 } RPSItem;
 
-RPSItem* rps_item_by_name(const char* name);
+RPSItem* rps_item_by_name(const char* name, RPSItem *destination);
 RPS_Result rps_match(const RPSItem* p1_pick, const RPSItem* p2_pick);
