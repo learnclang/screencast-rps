@@ -2,6 +2,13 @@ Screencast will be happening [HERE](http://www.twitch.tv/learnclang)
 
 Can't make it? Speak up [in the chat room](https://gitter.im/learnclang/general)
 
+## Episode 5
+
+Once we spoke a little more about heap and stack allocation, we will do a quick run of `valgrind` to check for memory leaks. And since valgrind is a profiler too, we should give that a whirl as well.
+If there is time left, we shall have a look at means to emulate object-oriented polymorphism in C.
+
+This episode will air at 8 pm GMT+0 on *Tuesday* the 13th of January 2015.
+
 ## Episode 4
 
 Now that we have a 'game-engine' in a separate compile unit, we will start to generalize it even more and start using structures to describe our game state. We will do all this in the name of science, as we need a reason to learn about c structs, as well as the heap at some point :) !
