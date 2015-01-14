@@ -2,6 +2,10 @@ Screencast will be happening [HERE](http://www.twitch.tv/learnclang)
 
 Can't make it? Speak up [in the chat room](https://gitter.im/learnclang/general)
 
+## Episode 6
+
+In this episode we will make a huge leap into the world of C++, and translate the program accordingly. In the process we will learn a few bits about C++ classes for sure.
+
 ## Episode 5
 
 Once we spoke a little more about heap and stack allocation, we will do a quick run of `valgrind` to check for memory leaks. And since valgrind is a profiler too, we should give that a whirl as well.
