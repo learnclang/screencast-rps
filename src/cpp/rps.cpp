@@ -81,5 +81,4 @@ RPSItem::RPSItem(const char *name, const int id, void (*say_you_lost)(FILE *))
 	, id(id)
 	, say_you_lost(say_you_lost)
 {
-	say_you_lost = 0;
 }
