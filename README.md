@@ -6,6 +6,9 @@ Can't make it? Speak up [in the chat room](https://gitter.im/learnclang/general)
 
 In this episode we will make a huge leap into the world of C++, and translate the program accordingly. In the process we will learn a few bits about C++ classes for sure.
 
+[Watch it on youtube !][e6-youtube]
+The episodes code [can be found here][e6-code]
+
 ## Episode 5
 
 Once we spoke a little more about heap and stack allocation, we will do a quick run of `valgrind` to check for memory leaks. And since valgrind is a profiler too, we should give that a whirl as well.
@@ -56,9 +59,10 @@ This episode aired 8 pm GMT+0 on *Wednesday* the 7th of January 2015.
 [e3-code]: https://github.com/learnclang/screencast-rps/tree/episode-03_strings-and-compile-units
 [e4-code]: https://github.com/learnclang/screencast-rps/tree/episode-04_structs-and-heap-usage
 [e5-code]: https://github.com/learnclang/screencast-rps/tree/episode-05_valgrind-and-polymorphism
+[e6-code]: https://github.com/learnclang/screencast-rps/tree/episode-06_cpp-conversion
 [e1-youtube]: https://www.youtube.com/watch?v=SaH1l9fd27A
 [e2-youtube]: http://youtu.be/-bDpQYa4zM4
 [e3-youtube]: http://youtu.be/y9Zf9PDbr3E
 [e4-youtube]: http://youtu.be/4cf38d3SSeA
 [e5-youtube]: http://youtu.be/AZuDQ7iew1Q
-
+[e6-youtube]: http://youtu.be/7r2R8liONJQ
