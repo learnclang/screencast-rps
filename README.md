@@ -6,8 +6,8 @@ Can't make it? Speak up [in the chat room](https://gitter.im/learnclang/general)
 
 In this episode we will make a huge leap into the world of C++, and translate the program accordingly. In the process we will learn a few bits about C++ classes for sure.
 
-[Watch it on youtube !][e6-youtube]
-The episodes code [can be found here][e6-code]
+* [Watch it on youtube !][e6-youtube]
+* The episodes code [can be found here][e6-code]
 
 ## Episode 5
 
