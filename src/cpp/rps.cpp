@@ -17,15 +17,9 @@ void rps_scissors_lost(FILE* stream) {
 }
 
 const RPSItem items[] = {
-	{ .name = "rock",
-	  .id = 0,
-	  .say_you_lost = rps_rock_lost,},
-	{ .name = "paper",
-	  .id = 1,
-	  .say_you_lost = rps_paper_lost,},
-	{ .name = "scissors",
-	  .id = 2,
-	  .say_you_lost = rps_scissors_lost,}
+	RPSItem("rock", 0, rps_rock_lost),
+	RPSItem("paper", 1, rps_paper_lost),
+	RPSItem("scissors", 2, rps_scissors_lost)
 };
 const int NUM_ITEMS = sizeof(items) / sizeof(items[0]);
 
@@ -71,4 +65,21 @@ RPSItem* rps_item_by_name(const char *name, RPSItem* destination)
 	}
 
 	return 0;
+}
+
+
+RPSItem::RPSItem()
+	: name(0)
+	, id(0)
+	, say_you_lost(0)
+{
+
+}
+
+RPSItem::RPSItem(const char *name, const int id, void (*say_you_lost)(FILE *))
+	: name(name)
+	, id(id)
+	, say_you_lost(say_you_lost)
+{
+	say_you_lost = 0;
 }

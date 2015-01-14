@@ -5,11 +5,14 @@ typedef enum {RPS_P1_WINS,
 			  RPS_TIE,
 			  RPS_ERROR} RPS_Result;
 
-typedef struct {
+struct RPSItem {
 	const char* name;
 	const int   id;
 	void (*say_you_lost)(FILE*);
-} RPSItem;
+
+	RPSItem();
+	RPSItem(const char* name, const int id, void (*say_you_lost)(FILE*));
+};
 
 
 RPSItem* rps_item_by_name(const char* name, RPSItem *destination);
