@@ -2,6 +2,13 @@ Screencast will be happening [HERE](http://www.twitch.tv/learnclang)
 
 Can't make it? Speak up [in the chat room](https://gitter.im/learnclang/general)
 
+## Episode 7
+
+Today we will improve on our C++ classes and leverage polymorphism based on a class hierarchy, or taxonomy of classes.
+
+* [Watch it on youtube !][e7-youtube]
+* The episodes code [can be found here][e7-code]
+
 ## Episode 6
 
 In this episode we will make a huge leap into the world of C++, and translate the program accordingly. In the process we will learn a few bits about C++ classes for sure.
@@ -60,9 +67,11 @@ This episode aired 8 pm GMT+0 on *Wednesday* the 7th of January 2015.
 [e4-code]: https://github.com/learnclang/screencast-rps/tree/episode-04_structs-and-heap-usage
 [e5-code]: https://github.com/learnclang/screencast-rps/tree/episode-05_valgrind-and-polymorphism
 [e6-code]: https://github.com/learnclang/screencast-rps/tree/episode-06_cpp-conversion
+[e7-code]: https://github.com/learnclang/screencast-rps/tree/episode-07_cpp-class-hierarchy
 [e1-youtube]: https://www.youtube.com/watch?v=SaH1l9fd27A
 [e2-youtube]: http://youtu.be/-bDpQYa4zM4
 [e3-youtube]: http://youtu.be/y9Zf9PDbr3E
 [e4-youtube]: http://youtu.be/4cf38d3SSeA
 [e5-youtube]: http://youtu.be/AZuDQ7iew1Q
 [e6-youtube]: http://youtu.be/7r2R8liONJQ
+[e7-youtube]: http://youtu.be/AJrRcgPS8Ec

@@ -3,23 +3,14 @@
 
 #include "rps.hpp"
 
+Rock rock;
+Paper paper;
+Scissors scissors;
 
-void rps_rock_lost(FILE* stream) {
-	fprintf(stream, "I am blind !\n");
-}
-
-void rps_paper_lost(FILE* stream) {
-	fprintf(stream, "I feel divided!\n");
-}
-
-void rps_scissors_lost(FILE* stream) {
-	fprintf(stream, "I am crushed !\n");
-}
-
-const RPSItem items[] = {
-	RPSItem("rock", 0, rps_rock_lost),
-	RPSItem("paper", 1, rps_paper_lost),
-	RPSItem("scissors", 2, rps_scissors_lost)
+const RPSItem* items[] = {
+	&rock,
+	&paper,
+	&scissors
 };
 const int NUM_ITEMS = sizeof(items) / sizeof(items[0]);
 
@@ -55,12 +46,11 @@ RPS_Result rps_match(const RPSItem *p1_pick, const RPSItem *p2_pick) {
 	}
 }
 
-RPSItem* rps_item_by_name(const char *name, RPSItem* destination)
+const RPSItem* rps_item_by_name(const char *name)
 {
-	for (const RPSItem* item = items; item < items + NUM_ITEMS; ++item) {
-		if (rps_strcmp(item->name, name) == 0) {
-			memcpy(destination, item, sizeof(RPSItem));
-			return destination;
+	for (const RPSItem** item = items; item < items + NUM_ITEMS; ++item) {
+		if (rps_strcmp((**item).name, name) == 0) {
+			return *item;
 		}
 	}
 
@@ -71,14 +61,48 @@ RPSItem* rps_item_by_name(const char *name, RPSItem* destination)
 RPSItem::RPSItem()
 	: name(0)
 	, id(0)
-	, say_you_lost(0)
 {
 
 }
 
-RPSItem::RPSItem(const char *name, const int id, void (*say_you_lost)(FILE *))
+RPSItem::RPSItem(const char *name, const int id)
 	: name(name)
 	, id(id)
-	, say_you_lost(say_you_lost)
 {
+}
+
+
+Rock::Rock()
+	: RPSItem("rock", 0)
+{
+
+}
+
+void Rock::say_you_lost(FILE *stream) const
+{
+	fprintf(stream, "I am blind !\n");
+}
+
+
+Paper::Paper()
+	: RPSItem("paper", 1)
+{
+
+}
+
+void Paper::say_you_lost(FILE *stream) const
+{
+	fprintf(stream, "I feel divided!\n");
+}
+
+
+Scissors::Scissors()
+	: RPSItem("scissors", 2)
+{
+
+}
+
+void Scissors::say_you_lost(FILE *stream) const
+{
+	fprintf(stream, "I am crushed !\n");
 }
