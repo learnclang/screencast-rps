@@ -5,29 +5,35 @@ typedef enum {RPS_P1_WINS,
 			  RPS_TIE,
 			  RPS_ERROR} RPS_Result;
 
-struct RPSItem {
+
+class RPSItem {
+public:
 	const char*const name;
 	const int   id;
 
 	virtual void say_you_lost(FILE*) const = 0;
 
+protected:
 	RPSItem();
 	RPSItem(const char* name, const int id);
 };
 
-struct Rock : RPSItem {
+class Rock : public RPSItem {
+public:
 	Rock();
 
 	virtual void say_you_lost(FILE*) const;
 };
 
-struct Paper : RPSItem {
+class Paper : public RPSItem {
+public:
 	Paper();
 
 	virtual void say_you_lost(FILE*) const;
 };
 
-struct Scissors : RPSItem {
+class Scissors : public RPSItem {
+public:
 	Scissors();
 
 	virtual void say_you_lost(FILE*) const;
