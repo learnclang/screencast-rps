@@ -2,6 +2,11 @@ Screencast will be happening [HERE](http://www.twitch.tv/learnclang)
 
 Can't make it? Speak up [in the chat room](https://gitter.im/learnclang/general)
 
+## Episode 9
+
+This time we finish our exploration of classes by looking at additional special methods you can't do without in real-world programs.
+Also we will look at the `malloc`/`free` counterparts in c++, aptly named `new` and `delete`, to use create and destroy objects on the heap.
+
 ## Episode 8
 
 Let's convert RPSItem structs into classes, and learn about access permissions in the process.

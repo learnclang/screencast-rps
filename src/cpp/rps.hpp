@@ -16,6 +16,10 @@ public:
 protected:
 	RPSItem();
 	RPSItem(const char* name, const int id);
+	RPSItem(const RPSItem& rhs);
+
+public:
+	virtual ~RPSItem();
 };
 
 class Rock : public RPSItem {
@@ -23,6 +27,8 @@ public:
 	Rock();
 
 	virtual void say_you_lost(FILE*) const;
+
+	virtual ~Rock();
 };
 
 class Paper : public RPSItem {
@@ -40,5 +46,5 @@ public:
 };
 
 
-const RPSItem *rps_item_by_name(const char* name);
+RPSItem *rps_item_by_name(const char* name);
 RPS_Result rps_match(const RPSItem* p1_pick, const RPSItem* p2_pick);

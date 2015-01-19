@@ -1,11 +1,19 @@
-#include <assert.h>
-#include <string.h>
+#include <cassert>
+#include <iostream>
 
 #include "rps.hpp"
 
-Rock rock;
-Paper paper;
-Scissors scissors;
+enum Type {
+	tRock = 0,
+	tPaper,
+	tScissors,
+
+	tUndefined = ~0
+};
+
+const Rock rock;
+const Paper paper;
+const Scissors scissors;
 
 const RPSItem* items[] = {
 	&rock,
@@ -46,11 +54,16 @@ RPS_Result rps_match(const RPSItem *p1_pick, const RPSItem *p2_pick) {
 	}
 }
 
-const RPSItem* rps_item_by_name(const char *name)
+RPSItem* rps_item_by_name(const char *name)
 {
 	for (const RPSItem** item = items; item < items + NUM_ITEMS; ++item) {
 		if (rps_strcmp((**item).name, name) == 0) {
-			return *item;
+			switch((*item)->id){
+			// This copy constructor invocation is just for show
+			case tRock: return new Rock(*dynamic_cast<const Rock*>(*item));
+			case tPaper: return new Paper;
+			case tScissors: return new Scissors;
+			}
 		}
 	}
 
@@ -60,7 +73,7 @@ const RPSItem* rps_item_by_name(const char *name)
 
 RPSItem::RPSItem()
 	: name(0)
-	, id(0)
+	, id(tUndefined)
 {
 
 }
@@ -71,9 +84,21 @@ RPSItem::RPSItem(const char *name, const int id)
 {
 }
 
+RPSItem::RPSItem(const RPSItem &rhs)
+	: name(rhs.name)
+	, id(rhs.id)
+{
+
+}
+
+RPSItem::~RPSItem()
+{
+	std::cerr << "Destroyed " << this->name << " (" << this << ")" << std::endl;
+}
+
 
 Rock::Rock()
-	: RPSItem("rock", 0)
+	: RPSItem("rock", tRock)
 {
 
 }
@@ -83,9 +108,14 @@ void Rock::say_you_lost(FILE *stream) const
 	fprintf(stream, "I am blind !\n");
 }
 
+Rock::~Rock()
+{
+	std::cerr << "I AM ROCK" << std::endl;
+}
+
 
 Paper::Paper()
-	: RPSItem("paper", 1)
+	: RPSItem("paper", tPaper)
 {
 
 }
@@ -97,7 +127,7 @@ void Paper::say_you_lost(FILE *stream) const
 
 
 Scissors::Scissors()
-	: RPSItem("scissors", 2)
+	: RPSItem("scissors", tScissors)
 {
 
 }

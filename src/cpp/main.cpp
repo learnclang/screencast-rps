@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 #include "rps.hpp"
 
@@ -9,7 +9,7 @@ int main(int argc, char* args[]) {
 		return 1;
 	}
 
-	const RPSItem* p1, *p2;
+	RPSItem* p1, *p2;
 
 	p1 = rps_item_by_name(args[1]);
 	if (p1 == 0) {
@@ -18,6 +18,7 @@ int main(int argc, char* args[]) {
 	}
 	p2 = rps_item_by_name(args[2]);
 	if (p2 == 0) {
+		delete p1;
 		fprintf(stderr, "P2 INVALID\n");
 		return 2;
 	}
@@ -44,5 +45,7 @@ int main(int argc, char* args[]) {
 	}
 	}
 
+	delete p1;
+	delete p2;
 	return rval;
 }
