@@ -7,6 +7,9 @@ Can't make it? Speak up [in the chat room](https://gitter.im/learnclang/general)
 This time we finish our exploration of classes by looking at additional special methods you can't do without in real-world programs.
 Also we will look at the `malloc`/`free` counterparts in c++, aptly named `new` and `delete`, to use create and destroy objects on the heap.
 
+* [Watch it on youtube !][e9-youtube]
+* The episodes code [can be found here][e9-code]
+
 ## Episode 8
 
 Let's convert RPSItem structs into classes, and learn about access permissions in the process.
@@ -26,7 +29,7 @@ Today we will improve on our C++ classes and leverage polymorphism based on a cl
 In this episode we will make a huge leap into the world of C++, and translate the program accordingly. In the process we will learn a few bits about C++ classes for sure.
 
 * [Watch it on youtube !][e6-youtube]
-* The episodes code [can be found here][e6-code]
+* The episodes code [can be found here][e6-code]p
 
 ## Episode 5
 
@@ -81,6 +84,7 @@ This episode aired 8 pm GMT+0 on *Wednesday* the 7th of January 2015.
 [e6-code]: https://github.com/learnclang/screencast-rps/tree/episode-06_cpp-conversion
 [e7-code]: https://github.com/learnclang/screencast-rps/tree/episode-07_cpp-class-hierarchy
 [e8-code]: https://github.com/learnclang/screencast-rps/tree/episode-08_cpp-access-permissions
+[e8-code]: https://github.com/learnclang/screencast-rps/tree/episode-09_cpp-classes-and-heap
 [e1-youtube]: https://www.youtube.com/watch?v=SaH1l9fd27A
 [e2-youtube]: http://youtu.be/-bDpQYa4zM4
 [e3-youtube]: http://youtu.be/y9Zf9PDbr3E
@@ -89,3 +93,4 @@ This episode aired 8 pm GMT+0 on *Wednesday* the 7th of January 2015.
 [e6-youtube]: http://youtu.be/7r2R8liONJQ
 [e7-youtube]: http://youtu.be/AJrRcgPS8Ec
 [e8-youtube]: http://youtu.be/uBhYyds6y-c
+[e9-youtube]: http://youtu.be/SRael5kNVTg
